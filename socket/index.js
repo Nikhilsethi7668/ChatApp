@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 9000; // Use environment variable or default to
 
 const io = new Server(PORT, {
   cors: {
-    origin: "*", // Replace "*" with your frontend URL for security
+    origin: "https://echochat-1.onrender.com/", // Replace "*" with your frontend URL for security
     methods: ["GET", "POST"],
   },
 });
