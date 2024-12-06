@@ -1,0 +1,19 @@
+different blocks connected vio SHA256
+block contain data 
+first block of a chain = genesis block
+it is decentalized (single failure se sb fail nahi hoga)
+It is P2P 
+Distributed Ledger-> transection history is stored{
+    whole chan contains 1 ledger rest are its copy
+}
+Immutable till 51% share are o=not occupied by one
+Consensus based Mechanism 
+
+proof of work (add new block in bloackchain and gain some bitcoin )
+proo of stake (get the transection fee on each transection in case of ethirium)
+ types of block - chain{
+    public
+    private 
+
+}
+ganache

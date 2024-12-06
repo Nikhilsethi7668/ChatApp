@@ -1,0 +1,60 @@
+Artificial neural network contains neurons which are called units. Our brains contains mlions of neurons in connected manner this cinnection is called neural network. Neurons is basic units of our brain .
+Neurons take input from sensory organs and perform appropriate action .
+ Artificial neural network is deried from biological neural network 
+ Nucleus diagram (contaisns dendrite, Cell Nucleus, Axon, Synapse{
+    synapse= connection cell b/w 2 neurons
+ })
+ Working of artificial neural network-{
+   take multiple input as x1,x2,x3,..... andd with weights w1,w2,w3,.... to a cell lik structure and cell is divided into 2 parts 1{
+      summation(i=1->n)(xi,wi) and another part is a function which take it whole as a input and after final calculations it gives output;
+      so as like this multiple neurons are connected together;
+
+   }
+   1-In this example nodes represents the neuron behaviour and node contains 2 part summation part- In this we calculate the sum of multiplication of input with weight 
+   2- Fn part-> it is also called activation fn .
+   Activation fn is most important component of artificial neural network. It decide the output of any node .
+   In this examople x1, x2, x3,... xn are the inputs and w1,w2,....wn are the associate weight 
+ }
+
+ TYPES OF ACTIVATION FUNCTION{
+   In artificial neural network there are 3 types of activation fn {
+      1-> linear fn 
+      2- heviside step fn 
+      3- Sigmoid fn
+   }
+
+   1- Linear Fn{
+      it is the simplest activation fn of ANN{
+         f(v)= a+v;
+
+         here v=summationi=1->n (xi.wi);
+         a-> bias factor
+      }
+   }
+   2-{
+      Heviside step fn ->{
+         fv={ 1 if v>=a , 0 otherwise
+      }
+   }
+   3-Sigmoid fn->{
+      In sigmoid activation fn the performance will be just like curve and the functionf(v)=1/1+pow(e,-v);
+
+   }
+   diagram ->(Architecture of Artificial neurall network){
+      in this diagram 20% nodes are the oppart of input layer and outout layer , the remaining 80% nodes participate in calculation of actions 
+   }
+   What are the advantages of ANN{
+      Parallel Procesing capability
+      2- Storing data on entire netwiork
+      3- capability  to work with incomplete knowledge
+      4- Having a memory distribution 
+   }
+
+   AI vs ML vs DL {
+
+   }
+   ML vs DL{
+      If less amount of input data required->   ML;
+      huge amount of i/p data required-> DL
+   }
+ }

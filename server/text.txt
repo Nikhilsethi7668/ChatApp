@@ -1,0 +1,3 @@
+NikhilSethi pass
+
+mongodb+srv://nikhilsethin494:NikhilSethi@cluster0.4q2wn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
