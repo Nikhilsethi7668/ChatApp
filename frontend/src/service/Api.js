@@ -1,6 +1,6 @@
 import axios from "axios";
+const url = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
-const url = "http://localhost:8000";
 export const addUser = async (data) => {
   try {
     await axios.post(`${url}/add`, data);
@@ -8,6 +8,7 @@ export const addUser = async (data) => {
     console.log(error.message);
   }
 };
+
 export const getusers = async () => {
   try {
     let response = await axios.get(`${url}/users`);
@@ -17,6 +18,7 @@ export const getusers = async () => {
     console.log(error.message);
   }
 };
+
 export const setConversation = async (data) => {
   try {
     await axios.post(`${url}/conversation/add`, data);
@@ -24,6 +26,7 @@ export const setConversation = async (data) => {
     console.log("Error while calling SetConversation API", error.message);
   }
 };
+
 export const getConversation = async (users) => {
   try {
     let response = await axios.post(`${url}/conversation/get`, users);
@@ -40,6 +43,7 @@ export const newMessage = async (message) => {
     console.log("Error while calling newMessage api", error.message);
   }
 };
+
 export const getMessages = async (id) => {
   try {
     let response = await axios.get(`${url}/message/get/${id}`);
@@ -48,6 +52,7 @@ export const getMessages = async (id) => {
     console.log("Error while calling getMessages", error.message);
   }
 };
+
 export const uploadFile = async (data) => {
   try {
     return await axios.post(`${url}/file/upload`, data);

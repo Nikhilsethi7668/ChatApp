@@ -1,7 +1,11 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+
+// Load environment variables
 dotenv.config();
-const URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.4q2wn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+
+// MongoDB Connection URL
+const URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.4q2wn.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 
 const Connection = async () => {
   try {
@@ -11,7 +15,9 @@ const Connection = async () => {
     });
     console.log("Connected to MongoDB successfully!");
   } catch (error) {
-    console.log("MongoDB connection error:", error.message);
+    console.error("MongoDB connection error:", error.message);
+    process.exit(1); // Exit process if connection fails
   }
 };
+
 module.exports = Connection;

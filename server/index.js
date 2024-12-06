@@ -1,16 +1,35 @@
 const express = require("express");
-const Connection = require("./database/db");
 const cors = require("cors");
-const route = require("../server/routes/route");
 const bodyparser = require("body-parser");
+const dotenv = require("dotenv");
+const route = require("../server/routes/route");
+const Connection = require("./database/db");
+
+// Load environment variables
+dotenv.config();
 
 const app = express();
-app.use(cors());
+
+// Middleware
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL || "*", // Allow requests only from the frontend
+    methods: ["GET", "POST"],
+  })
+);
 app.use(bodyparser.json({ extended: true }));
 app.use(bodyparser.urlencoded({ extended: true }));
+
+// Routes
 app.use("/", route);
-const PORT = 8000;
+
+// Port configuration
+const PORT = process.env.PORT || 8000;
+
+// Database connection
 Connection();
+
+// Start the server
 app.listen(PORT, () => {
-  console.log(`server is running on port ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });

@@ -1,8 +1,11 @@
 const { Server } = require("socket.io");
 
-const io = new Server(9000, {
+const PORT = process.env.PORT || 9000; // Use environment variable or default to 9000
+
+const io = new Server(PORT, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "*", // Replace "*" with your frontend URL for security
+    methods: ["GET", "POST"],
   },
 });
 
@@ -42,3 +45,5 @@ io.on("connection", (socket) => {
     console.log("User disconnected:", socket.id);
   });
 });
+
+console.log(`Socket.IO server running on port ${PORT}`);
