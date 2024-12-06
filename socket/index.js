@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 9000; // Use environment variable or default to
 
 const io = new Server(PORT, {
   cors: {
-    origin: "https://echochat-1.onrender.com/", // Replace "*" with your frontend URL for security
+    origin: "https://echochat-1.onrender.com", // Exact URL of your frontend without trailing slash
     methods: ["GET", "POST"],
   },
 });
@@ -47,3 +47,4 @@ io.on("connection", (socket) => {
 });
 
 console.log(`Socket.IO server running on port ${PORT}`);
+
