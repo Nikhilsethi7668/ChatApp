@@ -13,7 +13,7 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "*", // Allow requests only from the frontend
+    origin: "*", // Allow requests only from the frontend
     methods: ["GET", "POST"],
   })
 );
