@@ -13,7 +13,7 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: "*", // Allow requests only from the frontend
+    origin: "https://echochat-1.onrender.com/", // Allow requests only from the frontend
     methods: ["GET", "POST"],
   })
 );
