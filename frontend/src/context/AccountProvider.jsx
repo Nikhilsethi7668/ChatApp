@@ -7,7 +7,7 @@ const AccountProvider = ({ children }) => {
     const [activeUsers, setactiveUsers] = useState([])
     const socket = useRef();
     useEffect(() => {
-        socket.current = io('ws://localhost:9000')
+        socket.current = io('https://echochat-xomy.onrender.com/')
     }, [])
     return (
 
