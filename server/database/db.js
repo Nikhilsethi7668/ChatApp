@@ -5,7 +5,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 // MongoDB Connection URL
-const URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.4q2wn.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
+const URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.4q2wn.mongodb.net/`;
 
 const Connection = async () => {
   try {
