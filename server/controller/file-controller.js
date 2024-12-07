@@ -1,7 +1,7 @@
 const grid = require("gridfs-stream");
 
 const mongoose = require("mongoose");
-const url = "http://localhost:8000";
+const url = "https://chatapp-jevz.onrender.com";
 let gfs;
 let gridfsBucket;
 const conn = mongoose.connection;
