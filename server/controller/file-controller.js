@@ -22,6 +22,7 @@ const uploadFile = (req, res) => {
 };
 const getFile = async (req, res) => {
   try {
+    console.log("Fetching file with filename:", req.params.filename);
     const file = await gfs.files.findOne({ filename: req.params.filename });
     const readstream = gridfsBucket.openDownloadStream(file._id);
     readstream.pipe(res);
