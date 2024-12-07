@@ -48,7 +48,7 @@ function ChatFooter({ sendMessage, setmessage, message, setfile, file, setimage 
                 onKeyUp={(e) => sendMessage(e.key)}
                 value={message}
             />
-            <button onClick={sendMessage('Enter')} className="ml-3 text-gray-600 hover:text-gray-800">
+            <button onClick={()=>sendMessage('Enter')} className="ml-3 text-gray-600 hover:text-gray-800">
                 <IoSend className="text-xl" />
             </button>
         </div >
