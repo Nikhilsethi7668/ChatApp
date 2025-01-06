@@ -35,13 +35,13 @@ const Conversations = ({ text }) => {
 
     return (
         <div className="overflow-y-auto max-h-screen px-4 sm:px-6 md:px-8">
-            {users.map((user, index) => (
+            {user.length>0?users.map((user, index) => (
                 user.sub !== account.sub && (
                     <div key={user.sub} className="mb-4">
                         <Conversation user={user} />
                     </div>
                 )
-            ))}
+            )): <h1>Loading...</h1>}
         </div>
     );
 };
